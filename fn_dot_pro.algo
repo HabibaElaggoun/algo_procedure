@@ -1,0 +1,37 @@
+FUNCTION Fn_Dot_product (ps: INTEGER, v1: ARRAY_OF INTEGER, v2: ARRAY_OF INTEGER) : INTEGER
+VAR
+    ps: INTEGER:=0;
+    i: INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        ps:=ps + v1[i] * v2[i]:
+
+    END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM Dot_pro_algo
+VAR
+    ps : INTEGER :=0;
+    n,i : INTEGER;
+    v1,v2 : ARRAY_OF INTEGER[n];
+
+BEGIN
+    write ('give the number of pairs vectors:');
+    read(n);
+
+    FOR i FROM 0 TO n  DO
+        read(v1);
+        read(v2);
+
+        ps= Fn_Dot_product(v1,v2,ps)
+
+        IF (ps=0) THEN
+            write ('two vectors are orthogonal')
+        ELSE
+            write ('two vectors are not orthogonal')
+        END_IF
+
+    END_FOR
+END
