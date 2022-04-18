@@ -19,7 +19,7 @@ VAR
 BEGIN
     write ('give th nunber of pairs Vectors:')
     read(n);
-    FOR i FROM 0 TO n-1 DO
+    FOR i FROM 0 TO n DO
         read(v1);
         read(v2);
            Dot_Product(ps, v1,v2);
